@@ -1,0 +1,38 @@
+package javaapplication43;
+
+/**
+ *
+ * @author Jess
+ */
+public class JavaApplication43 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static long problem5() {
+    long i = 2520;
+    boolean found = false;
+    while (!found) {
+        i += 2520;
+        boolean divis = true;
+        for (int j = 11; j <= 20; j++) {
+            if (i % j != 0) {
+                divis = false;
+                //System.out.println(i + " is not divisible by " + j);
+                break;
+            }
+            else {
+                //System.out.println(i + " is divisible by " + j);
+            }
+        }
+        if (divis) {
+            found = true;
+        }
+    }
+    return i;
+}
+       public static void main (String...args){
+        System.out.println(problem5 ());
+       }
+       
+}
